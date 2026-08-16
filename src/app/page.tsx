@@ -3,65 +3,96 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100 font-sans pb-20">
-      {/* Header / Navbar */}
+      {/* Header */}
       <header className="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <span className="bg-emerald-500 text-slate-950 font-black px-2 py-1 rounded text-xl">FG</span>
-            <span className="text-xl font-bold tracking-tight">Finanzas<span className="text-emerald-400">Guate</span></span>
+            <span className="bg-emerald-500 text-slate-950 font-black px-2 py-1 rounded text-lg">FG</span>
+            <span className="font-bold text-lg text-white">Finanzas<span className="text-emerald-400">Guate</span></span>
           </Link>
-          <nav className="flex gap-6 text-sm font-medium text-slate-300">
-            <a href="#guias" className="hover:text-emerald-400 transition-colors">Guías</a>
-            <Link href="/guias/zigi-guatemala" className="hover:text-emerald-400 transition-colors">Gana Dinero</Link>
-          </nav>
+          <a
+            href="#guias"
+            className="text-xs bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 font-bold px-3 py-1.5 rounded-lg transition-all"
+          >
+            Ver Guías
+          </a>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="max-w-4xl mx-auto text-center px-4 pt-16 pb-12">
-        <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
-          Guías y Métodos Verificados
+      <section className="max-w-4xl mx-auto px-4 pt-16 pb-12 text-center space-y-6">
+        <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          Educación Financiera & Oportunidades en GT
         </span>
-        <h1 className="text-4xl md:text-6xl font-extrabold mt-6 leading-tight">
-          Aprende a mover y ganar dinero en <span className="text-emerald-400">Guatemala</span>
+        <h1 className="text-4xl md:text-6xl font-black text-white leading-tight">
+          Aprende a Ganar, Mover y Cobrar tu Dinero en <span className="text-emerald-400">Guatemala</span>
         </h1>
-        <p className="text-slate-400 text-lg mt-4 max-w-2xl mx-auto">
-          Tutoriales paso a paso para retirar fondos de Airtm, aprovechar promociones de Zigi y optimizar tus finanzas personales sin pagar comisiones de más.
+        <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
+          Guías paso a paso para aprovechar billeteras digitales, retirar pagos internacionales de PayPal a bancos locales y maximizar tus recompensas de referidos.
         </p>
       </section>
 
-      {/* Sección de Guías Destacadas con id="guias" */}
+      {/* Grid de Contenidos */}
       <section id="guias" className="max-w-6xl mx-auto px-4 pt-8">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl font-bold text-white">Guías y Tutoriales Recientes</h2>
+          <h2 className="text-2xl font-bold text-white">Mejores Formas de Ganar y Mover Dinero en GT</h2>
           <span className="text-xs text-slate-500 uppercase font-semibold">Actualizado 2026</span>
         </div>
 
-        {/* Grid de Tarjetas */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          {/* Tarjeta de Zigi */}
+          {/* Card de Zigi */}
           <Link 
             href="/guias/zigi-guatemala" 
-            className="group bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 shadow-lg"
+            className="group bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 shadow-lg relative overflow-hidden flex flex-col justify-between"
           >
-            <div className="flex items-center justify-between mb-4">
-              <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
-                Gana Q40
-              </span>
-              <span className="text-xs text-slate-500">Zigi GT</span>
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                  Hasta Q70 por Amigo
+                </span>
+                <span className="text-xs text-slate-500">App Zigi</span>
+              </div>
+
+              <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                Cómo Ganar Dinero Invitando Gente a ZIGI
+              </h3>
+
+              <p className="text-slate-400 text-sm mt-2 line-clamp-3">
+                Gana de Q40 a Q70 por cada conocido que se registre y Q10 directos para tu invitado. Aprende el truco de la primera transferencia.
+              </p>
             </div>
 
-            <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
-              Cómo Ganar Dinero Invitando Amigos a ZIGI
-            </h3>
+            <div className="mt-6 flex items-center gap-2 text-emerald-400 text-sm font-semibold">
+              <span>Ver Guía y Código</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </Link>
 
-            <p className="text-slate-400 text-sm mt-2 line-clamp-3">
-              Recibí Q40 por cada amigo que invités y Q10 para tu amigo. Aprende paso a paso cómo activar tu código de referido.
-            </p>
+          {/* Card de Airtm */}
+          <Link 
+            href="/guias/retirar-airtm-guatemala" 
+            className="group bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 shadow-lg relative overflow-hidden flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                  PayPal & Remesas
+                </span>
+                <span className="text-xs text-slate-500">Airtm GT</span>
+              </div>
+
+              <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                Retirar Dinero de PayPal a Bancos de Guatemala
+              </h3>
+
+              <p className="text-slate-400 text-sm mt-2 line-clamp-3">
+                Usa la cuenta bancaria de EE.UU. que otorga Airtm para transferir fondos de PayPal, Wise, Binance o freelancing directamente a tu cuenta local.
+              </p>
+            </div>
 
             <div className="mt-6 flex items-center gap-2 text-emerald-400 text-sm font-semibold">
-              <span>Leer Guía Completa</span>
+              <span>Ver Tutorial Completo</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </div>
           </Link>
