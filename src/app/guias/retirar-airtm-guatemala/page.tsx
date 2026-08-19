@@ -1,15 +1,86 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Cómo Usar y Retirar Dinero de Airtm a Bancos de Guatemala | FinanzasGuate',
-  description: 'Guía completa para cobrar PayPal en Guatemala mediante la cuenta Virtual de EE.UU. de Airtm y retirar fondos en Quetzales a tu banco local.',
+// 1. METADATOS OPTIMIZADOS PARA SEO (Van antes del componente)
+export const metadata: Metadata = {
+  title: 'Cómo Retirar Dinero de PayPal en Guatemala (2026) | Guía Airtm',
+  description: 'Aprende a retirar fondos de PayPal a Banco Industrial, Banrural o G&T usando la cuenta virtual de EE.UU. de Airtm sin altas comisiones.',
+  keywords: [
+    'retirar paypal guatemala',
+    'airtm guatemala',
+    'cobrar paypal banco industrial',
+    'cuenta virtual usa guatemala',
+    'retirar paypal a banrural',
+    'como cobrar trabajos freelance guatemala',
+  ],
+  alternates: {
+    canonical: 'https://finanzasguate.com/airtm-guia-guatemala', // Cambia por tu dominio real
+  },
+  openGraph: {
+    title: 'Cómo Retirar Dinero de PayPal a Tu Banco en Guatemala',
+    description: 'Paso a paso para transferir tus dólares de PayPal a Quetzales en bancos de Guatemala vía Airtm.',
+    url: 'https://finanzasguate.com/airtm-guia-guatemala',
+    siteName: 'FinanzasGuate',
+    locale: 'es_GT',
+    type: 'article',
+  },
 };
 
 export default function AirtmGuiaPage() {
   const MI_LINK_AIRTM = 'https://app.airtm.com/ivt/pabloe8c9705f';
 
+  // 2. DATOS ESTRUCTURADOS PARA GOOGLE (JSON-LD)
+  const jsonLdHowTo = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Cómo retirar dinero de PayPal a bancos de Guatemala con Airtm',
+    description: 'Pasos para transferir saldo de PayPal a una cuenta en Quetzales mediante la cuenta bancaria virtual de EE.UU. de Airtm.',
+    step: [
+      {
+        '@type': 'HowToStep',
+        name: 'Crear y verificar cuenta',
+        text: 'Regístrate en Airtm con tu correo y sube tu DPI para verificar tu identidad.',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Obtener Cuenta Virtual EE.UU.',
+        text: 'Solicita el número de ruta y cuenta bancaria estadounidense dentro de la sección Agregar en Airtm.',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Vincular a PayPal',
+        text: 'Agrega la cuenta bancaria de EE.UU. en la sección Cartera de PayPal.',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Transferir a Banco Local',
+        text: 'Retira el saldo acreditado en Airtm mediante transferencia ACH a tu banco local en Guatemala.',
+      },
+    ],
+  };
+
+  const jsonLdVideo = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: '¡Por fin! El MEJOR Método para Retirar de PayPal en Guatemala 🇬🇹 (Airtm)',
+    description: 'Tutorial en video mostrando el proceso para vincular Airtm a PayPal y hacer retiros a bancos guatemaltecos.',
+    thumbnailUrl: 'https://img.youtube.com/vi/CTf2-kj8t3Q/hqdefault.jpg',
+    uploadDate: '2026-06-30',
+    embedUrl: 'https://www.youtube.com/embed/CTf2-kj8t3Q',
+  };
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100 font-sans pb-20">
+      {/* INYECCIÓN DE SCHEMAS JSON-LD PARA GOOGLE */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdHowTo) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdVideo) }}
+      />
+
       {/* Header */}
       <header className="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -73,6 +144,7 @@ export default function AirtmGuiaPage() {
               className="absolute top-0 left-0 w-full h-full"
               src="https://www.youtube.com/embed/CTf2-kj8t3Q"
               title="¡Por fin! El MEJOR Método para Retirar de PayPal en Guatemala 🇬🇹 (Airtm)"
+              loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
