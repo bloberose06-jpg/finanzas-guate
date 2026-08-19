@@ -60,6 +60,25 @@ export default function AirtmGuiaPage() {
           </a>
         </div>
 
+        {/* Video Tutorial */}
+        <section className="my-10 bg-slate-900 border border-slate-800 rounded-2xl p-4 md:p-6 shadow-lg">
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-2 flex items-center gap-2">
+            📺 Video Tutorial Explicativo
+          </h2>
+          <p className="text-slate-400 text-sm mb-4">
+            Mira paso a paso cómo vincular tu cuenta virtual de EE.UU. de Airtm a PayPal y retirar tus fondos a tu banco guatemalteco.
+          </p>
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-slate-800">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/CTf2-kj8t3Q"
+              title="¡Por fin! El MEJOR Método para Retirar de PayPal en Guatemala 🇬🇹 (Airtm)"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </section>
+
         <div className="space-y-10 text-slate-300 leading-relaxed mt-10">
           
           {/* Para qué sirve Airtm */}
