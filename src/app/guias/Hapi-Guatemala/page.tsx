@@ -39,6 +39,30 @@ export default function HapiGuiaPage() {
           </p>
         </div>
 
+        {/* Video Tutorial en Embed de YouTube */}
+        <div className="my-8 rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-xl">
+          <div className="relative aspect-video w-full">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/JDsx-WU7yoc"
+              title="Comprar acciones y ETFs en Guatemala | Guía HAPI 2026"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="p-4 bg-slate-900/80 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+            <span>📹 Video explicativo: Comprar acciones y ETFs en Guatemala</span>
+            <a 
+              href="https://www.youtube.com/watch?v=JDsx-WU7yoc" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-emerald-400 hover:underline"
+            >
+              Ver en YouTube
+            </a>
+          </div>
+        </div>
+
         {/* Banner promocional / Imagen destacada */}
         <div className="my-8 rounded-2xl overflow-hidden border border-slate-800 relative bg-slate-900">
           <img
