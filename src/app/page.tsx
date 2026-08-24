@@ -125,6 +125,34 @@ export default function Home() {
             </div>
           </Link>
 
+          {/* Nueva Card: Ciclo Crypto Octubre */}
+          <Link 
+            href="/guias/ciclo-crypto-octubre" 
+            className="group bg-slate-900 border border-slate-800 hover:border-amber-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 shadow-lg relative overflow-hidden flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <span className="bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                  Proyección 3x - 5x
+                </span>
+                <span className="text-xs text-slate-500">Crypto / Binance</span>
+              </div>
+
+              <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
+                ¿Por qué Octubre Inicia el Próximo Bull Run Cripto?
+              </h3>
+
+              <p className="text-slate-400 text-sm mt-2 line-clamp-3">
+                Análisis del ciclo de 4 años en Bitcoin, Ethereum y Solana. Descubre por qué el ratio riesgo/beneficio actual representa una oportunidad clave.
+              </p>
+            </div>
+
+            <div className="mt-6 flex items-center gap-2 text-amber-400 text-sm font-semibold">
+              <span>Ver Análisis Cripto</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </Link>
+
         </div>
       </section>
     </main>
