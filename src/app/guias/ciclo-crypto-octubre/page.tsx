@@ -1,160 +1,183 @@
+import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Home() {
+// Importación corregida apuntando a la carpeta guias/
+import cycleImg from '../ciclo-bitcoin.jpg';
+
+export const metadata = {
+  title: '¿Por qué Octubre Inicia el Próximo Bull Run Crypto? | Oportunidad en BTC, ETH y SOL',
+  description: 'Análisis del ciclo de 4 años de Bitcoin. Descubre por qué el ratio riesgo/beneficio actual (3x-5x vs 20-30% downside) en las principales criptomonedas representa una oportunidad única.',
+  keywords: ['Bitcoin', 'Ethereum', 'Solana', 'Bull Run', 'Ciclo de 4 años', 'Binance', 'Finanzas Guatemala', 'Criptomonedas'],
+};
+
+export default function CicloCryptoPage() {
+  const binanceRef = "https://www.binance.com/register?ref=B8J9JHZM";
+
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 font-sans pb-20">
-      {/* Header */}
-      <header className="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="bg-emerald-500 text-slate-950 font-black px-2 py-1 rounded text-lg">FG</span>
-            <span className="font-bold text-lg text-white">Finanzas<span className="text-emerald-400">Guate</span></span>
-          </Link>
-          <a
-            href="#guias"
-            className="text-xs bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 font-bold px-3 py-1.5 rounded-lg transition-all"
-          >
-            Ver Guías
-          </a>
+    <article className="max-w-4xl mx-auto px-4 py-10 text-gray-800">
+      {/* Encabezado */}
+      <header className="mb-8">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+            Análisis de Mercado
+          </span>
+          <span className="text-sm text-gray-500">• 4 min de lectura</span>
         </div>
+        
+        <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+          ¿Por qué Octubre podría marcar el inicio del próximo Bull Run Cripto?
+        </h1>
+        
+        <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+          Las principales criptomonedas se preparan para un movimiento proyectado de <strong>3x a 5x</strong>. 
+          Estamos al final del ciclo de 4 años y ante un escenario asimétrico de riesgo/beneficio que ocurre pocas veces por década.
+        </p>
       </header>
 
-      {/* Hero Section */}
-      <section className="max-w-4xl mx-auto px-4 pt-16 pb-12 text-center space-y-6">
-        <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-          Educación Financiera & Oportunidades en GT
-        </span>
-        <h1 className="text-4xl md:text-6xl font-black text-white leading-tight">
-          Aprende a Ganar, Mover y Cobrar tu Dinero en <span className="text-emerald-400">Guatemala</span>
-        </h1>
-        <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
-          Guías paso a paso para aprovechar billeteras digitales, retirar pagos internacionales de PayPal a bancos locales y maximizar tus recompensas de referidos.
+      {/* Banner Resumen / Key Takeaways */}
+      <div className="bg-gradient-to-r from-slate-900 to-indigo-950 text-white rounded-2xl p-6 md:p-8 mb-10 shadow-xl">
+        <h2 className="text-xl font-bold mb-4 text-amber-400 flex items-center gap-2">
+          💡 Puntos Clave de la Oportunidad Actual
+        </h2>
+        <ul className="space-y-3 text-slate-200 text-sm md:text-base">
+          <li className="flex items-start gap-2">
+            <span className="text-amber-400 font-bold">•</span>
+            <span><strong>Cierre de ciclo de 4 años:</strong> Octubre históricamente marca la transición hacia la fase parabólica alcista.</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-amber-400 font-bold">•</span>
+            <span><strong>Ratio Riesgo/Beneficio asimétrico:</strong> Riesgo estimado de corrección del 20%-30% vs. potencial de subida del 300%-500% (3x-5x).</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-amber-400 font-bold">•</span>
+            <span><strong>Soportes semanales clave (Weekly Candles):</strong> Velas semanales sólidas en BTC, ETH y SOL confirman acumulación institucional.</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Contenido Principal */}
+      <section className="prose prose-lg max-w-none space-y-6 text-gray-700">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+          1. El Ciclo de 4 Años de Bitcoin y el Catalizador de Octubre
+        </h2>
+        <p>
+          El mercado de criptomonedas se rige bajo un ciclo de cuatro años determinado por los eventos de <em>halving</em> de Bitcoin y la liquidez global. Históricamente, tras la fase de consolidación posterior al halving, <strong>octubre es el mes decisivo</strong> donde se reanuda la tendencia alcista dominante.
+        </p>
+        <p>
+          No estar posicionado antes de este cambio de fase significa perder el tramo de mayor valorización del ciclo. Oportunidades con este grado de claridad técnica ocurren únicamente una o dos veces cada varios años.
+        </p>
+
+        {/* Imagen del Ciclo */}
+        <figure className="my-8">
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+            <Image 
+              src={cycleImg} 
+              alt="Gráfico explicativo del ciclo de 4 años de Bitcoin" 
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
+          <figcaption className="text-center text-sm text-gray-500 mt-2">
+            Estructura histórica del ciclo de 4 años de Bitcoin y la fase de expansión.
+          </figcaption>
+        </figure>
+
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+          2. ¿Por qué es fundamental acumular BTC y Major Coins (ETH, SOL) AHORA?
+        </h2>
+        <p>
+          Durante las fases iniciales de un <em>Bull Run</em>, la liquidez fluye primero hacia los activos más consolidados y seguros. Comprar <strong>Bitcoin (BTC)</strong>, <strong>Ethereum (ETH)</strong> y <strong>Solana (SOL)</strong> en este punto ofrece dos ventajas críticas:
+        </p>
+        
+        <div className="grid md:grid-cols-2 gap-4 my-6">
+          <div className="p-5 border border-amber-200 bg-amber-50/50 rounded-xl">
+            <h3 className="font-bold text-lg text-amber-900 mb-2">🛡️ Mayor Seguridad</h3>
+            <p className="text-sm text-amber-800">
+              El hecho de que estas criptomonedas hayan mostrado fortaleza reciente valida la presencia de compradores institucionales. Son activos con alta liquidez que no corren el riesgo de desaparecer como ocurre con proyectos de baja capitalización.
+            </p>
+          </div>
+          <div className="p-5 border border-indigo-200 bg-indigo-50/50 rounded-xl">
+            <h3 className="font-bold text-lg text-indigo-900 mb-2">📈 Velas Semanales Clave (Weekly Candles)</h3>
+            <p className="text-sm text-indigo-800">
+              Las velas semanales están sosteniendo niveles de soporte clave. Cuando una tendencia mayor arranca desde estos soportes, los retrocesos profundos son muy poco frecuentes.
+            </p>
+          </div>
+        </div>
+
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+          3. La Matemática del Riesgo vs. Beneficio (Risk/Reward Ratio)
+        </h2>
+        <p>
+          En el trading e inversión profesional, todo se reduce a la asimetría de la oportunidad. Analicemos la estructura actual del mercado:
+        </p>
+
+        {/* Tabla Risk Reward */}
+        <div className="overflow-x-auto my-6">
+          <table className="w-full text-left border-collapse bg-white rounded-xl shadow-sm border border-gray-200">
+            <thead>
+              <tr className="bg-gray-100 text-gray-900 font-bold border-b border-gray-200">
+                <th className="p-4">Escenario</th>
+                <th className="p-4">Variación Proyectada</th>
+                <th className="p-4">Interpretación</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-200 text-sm">
+              <tr>
+                <td className="p-4 font-semibold text-red-600">Riesgo Bajista (Downside)</td>
+                <td className="p-4 font-bold text-red-600">-20% a -30%</td>
+                <td className="p-4 text-gray-600">Corrección máxima estimada retesteando soportes semanales.</td>
+              </tr>
+              <tr>
+                <td className="p-4 font-semibold text-green-600">Potencial Alcista (Upside)</td>
+                <td className="p-4 font-bold text-green-600">+300% a +500% (3x - 5x)</td>
+                <td className="p-4 text-gray-600">Proyección conservadora para el pico del ciclo en BTC, ETH y SOL.</td>
+              </tr>
+              <tr className="bg-indigo-50/60 font-bold">
+                <td className="p-4 text-indigo-950">Relación Riesgo / Beneficio</td>
+                <td className="p-4 text-indigo-950" colSpan={2}>
+                  Arriesgar 1% de caída para buscar entre 10% y 15% de ganancia (1:10+ R/R)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Pocos activos financieros ofrecen una ventana donde el riesgo está acotado a un 20%-30% frente a la posibilidad real de triplicar o quintuplicar el capital en los próximos meses.
         </p>
       </section>
 
-      {/* Grid de Contenidos */}
-      <section id="guias" className="max-w-6xl mx-auto px-4 pt-8">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl font-bold text-white">Mejores Formas de Ganar y Mover Dinero en GT</h2>
-          <span className="text-xs text-slate-500 uppercase font-semibold">Actualizado 2026</span>
+      {/* CTA Box / Referral Binance */}
+      <div className="my-12 p-8 bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-600 rounded-2xl text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="space-y-2 text-center md:text-left">
+          <span className="bg-black/20 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+            Empieza Hoy
+          </span>
+          <h3 className="text-2xl md:text-3xl font-extrabold text-white">
+            ¿Listo para posicionarte en el próximo Bull Run?
+          </h3>
+          <p className="text-amber-100 text-sm md:text-base max-w-xl">
+            Crea tu cuenta en <strong>Binance</strong> con nuestro enlace oficial para comprar Bitcoin, Ethereum y Solana de forma segura y con beneficios en comisiones.
+          </p>
         </div>
+        
+        <Link 
+          href={binanceRef} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-block bg-slate-900 hover:bg-slate-800 text-amber-400 font-extrabold px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-1 text-center whitespace-nowrap"
+        >
+          Registrarse en Binance 🚀
+        </Link>
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          {/* Card de Zigi */}
-          <Link 
-            href="/guias/zigi-guatemala" 
-            className="group bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 shadow-lg relative overflow-hidden flex flex-col justify-between"
-          >
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
-                  Hasta Q70 por Amigo
-                </span>
-                <span className="text-xs text-slate-500">App Zigi</span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
-                Cómo Ganar Dinero Invitando Gente a ZIGI
-              </h3>
-
-              <p className="text-slate-400 text-sm mt-2 line-clamp-3">
-                Gana de Q40 a Q70 por cada conocido que se registre y Q10 directos para tu invitado. Aprende el truco de la primera transferencia.
-              </p>
-            </div>
-
-            <div className="mt-6 flex items-center gap-2 text-emerald-400 text-sm font-semibold">
-              <span>Ver Guía y Código</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-          </Link>
-
-          {/* Card de Airtm */}
-          <Link 
-            href="/guias/retirar-airtm-guatemala" 
-            className="group bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 shadow-lg relative overflow-hidden flex flex-col justify-between"
-          >
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
-                  PayPal & Remesas
-                </span>
-                <span className="text-xs text-slate-500">Airtm GT</span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
-                Retirar Dinero de PayPal a Bancos de Guatemala
-              </h3>
-
-              <p className="text-slate-400 text-sm mt-2 line-clamp-3">
-                Usa la cuenta bancaria de EE.UU. que otorga Airtm para transferir fondos de PayPal, Wise, Binance o freelancing directamente a tu cuenta local.
-              </p>
-            </div>
-
-            <div className="mt-6 flex items-center gap-2 text-emerald-400 text-sm font-semibold">
-              <span>Ver Tutorial Completo</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-          </Link>
-
-          {/* Card de Hapi */}
-          <Link 
-            href="/guias/Hapi-Guatemala" 
-            className="group bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 shadow-lg relative overflow-hidden flex flex-col justify-between"
-          >
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
-                  Inversiones & Acciones
-                </span>
-                <span className="text-xs text-slate-500">Hapi GT</span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
-                Cómo Invertir en Bolsa desde Guatemala con Hapi
-              </h3>
-
-              <p className="text-slate-400 text-sm mt-2 line-clamp-3">
-                Aprende a crear tu cuenta, depositar fondos desde bancos locales e invertir en acciones y ETFs de EE.UU. de forma segura.
-              </p>
-            </div>
-
-            <div className="mt-6 flex items-center gap-2 text-emerald-400 text-sm font-semibold">
-              <span>Ver Guía Paso a Paso</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-          </Link>
-
-          {/* Nueva Card: Ciclo Crypto Octubre */}
-          <Link 
-            href="/guias/ciclo-crypto-octubre" 
-            className="group bg-slate-900 border border-slate-800 hover:border-amber-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 shadow-lg relative overflow-hidden flex flex-col justify-between"
-          >
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase">
-                  Proyección 3x - 5x
-                </span>
-                <span className="text-xs text-slate-500">Crypto / Binance</span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
-                ¿Por qué Octubre Inicia el Próximo Bull Run Cripto?
-              </h3>
-
-              <p className="text-slate-400 text-sm mt-2 line-clamp-3">
-                Análisis del ciclo de 4 años en Bitcoin, Ethereum y Solana. Descubre por qué el ratio riesgo/beneficio actual representa una oportunidad clave.
-              </p>
-            </div>
-
-            <div className="mt-6 flex items-center gap-2 text-amber-400 text-sm font-semibold">
-              <span>Ver Análisis Cripto</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-          </Link>
-
-        </div>
-      </section>
-    </main>
+      {/* Footer del Artículo */}
+      <footer className="mt-10 pt-6 border-t border-gray-200 text-xs text-gray-500 text-center">
+        <p>
+          <em>Aviso de Riesgo:</em> El contenido presentado es puramente educativo e informativo. Las inversiones en criptomonedas conllevan volatilidad y riesgo de mercado. Realiza tu propia investigación (DYOR) antes de tomar decisiones financieras.
+        </p>
+      </footer>
+    </article>
   );
 }
