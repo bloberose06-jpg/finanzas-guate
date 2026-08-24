@@ -2,9 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// Importación corregida apuntando a la carpeta guias/
-import cycleImg from '../ciclo-bitcoin.jpg';
-
 export const metadata = {
   title: '¿Por qué Octubre Inicia el Próximo Bull Run Crypto? | Oportunidad en BTC, ETH y SOL',
   description: 'Análisis del ciclo de 4 años de Bitcoin. Descubre por qué el ratio riesgo/beneficio actual (3x-5x vs 20-30% downside) en las principales criptomonedas representa una oportunidad única.',
@@ -68,12 +65,14 @@ export default function CicloCryptoPage() {
           No estar posicionado antes de este cambio de fase significa perder el tramo de mayor valorización del ciclo. Oportunidades con este grado de claridad técnica ocurren únicamente una o dos veces cada varios años.
         </p>
 
-        {/* Imagen del Ciclo */}
+        {/* Imagen cargada directamente de public/ */}
         <figure className="my-8">
           <div className="relative w-full rounded-2xl overflow-hidden shadow-lg border border-gray-200">
             <Image 
-              src={cycleImg} 
+              src="/ciclo-bitcoin.jpg" 
               alt="Gráfico explicativo del ciclo de 4 años de Bitcoin" 
+              width={1200}
+              height={675}
               className="w-full h-auto object-cover"
               priority
             />
