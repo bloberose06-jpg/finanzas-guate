@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     'inversiones guatemala',
   ],
   alternates: {
-    canonical: 'https://finanzasguate.com',
+    canonical: 'https://finanzas-guate.vercel.app', // Corregido a la URL actual
   },
   openGraph: {
     title: 'FinanzasGuate | Guías de PayPal, Cripto e Inversiones en Guatemala',
     description: 'Aprende a mover, cobrar e invertir tu dinero desde Guatemala de forma legal y segura.',
-    url: 'https://finanzasguate.com',
+    url: 'https://finanzas-guate.vercel.app', // Corregido a la URL actual
     siteName: 'FinanzasGuate',
     locale: 'es_GT',
     type: 'website',
@@ -34,8 +34,8 @@ export default function Home() {
     '@graph': [
       {
         '@type': 'WebSite',
-        '@id': 'https://finanzasguate.com/#website',
-        url: 'https://finanzasguate.com',
+        '@id': 'https://finanzas-guate.vercel.app/#website', // Corregido
+        url: 'https://finanzas-guate.vercel.app', // Corregido
         name: 'FinanzasGuate',
         description: 'Educación financiera, cripto y retiros internacionales en Guatemala.',
         inLanguage: 'es-GT',
@@ -47,25 +47,25 @@ export default function Home() {
             '@type': 'ListItem',
             position: 1,
             name: 'Cómo retirar dinero de PayPal a Bancos de Guatemala',
-            url: 'https://finanzasguate.com/guias/retirar-airtm-guatemala',
+            url: 'https://finanzas-guate.vercel.app/guias/retirar-airtm-guatemala', // Corregido
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Cómo ganar dinero con la App Zigi en Guatemala',
-            url: 'https://finanzasguate.com/guias/zigi-guatemala',
+            url: 'https://finanzas-guate.vercel.app/guias/zigi-guatemala', // Corregido
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Cómo invertir en la Bolsa de EE.UU. desde Guatemala con Hapi',
-            url: 'https://finanzasguate.com/guias/hapi-guatemala',
+            url: 'https://finanzas-guate.vercel.app/guias/hapi-guatemala', // Corregido
           },
           {
             '@type': 'ListItem',
             position: 4,
             name: 'Análisis Cripto y Bull Run en Binance para Guatemala',
-            url: 'https://finanzasguate.com/guias/ciclo-crypto-octubre',
+            url: 'https://finanzas-guate.vercel.app/guias/ciclo-crypto-octubre', // Corregido
           },
         ],
       },
@@ -121,7 +121,7 @@ export default function Home() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Card Airtm / PayPal (URL y Copy Optimizado) */}
+          {/* Card Airtm / PayPal */}
           <Link
             href="/guias/retirar-airtm-guatemala"
             className="group bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 shadow-lg relative overflow-hidden flex flex-col justify-between"
@@ -149,7 +149,7 @@ export default function Home() {
             </div>
           </Link>
 
-          {/* Card Hapi (URL en minúsculas para SEO) */}
+          {/* Card Hapi */}
           <Link
             href="/guias/hapi-guatemala"
             className="group bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all hover:-translate-y-1 shadow-lg relative overflow-hidden flex flex-col justify-between"
